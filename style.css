@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+html{
+    scroll-behavior:smooth;
+}
+.bground{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 1)),url(Images/IMG_9283-1.png);
+    background-size: cover;
+    background-position: center;
+    padding: 0 8%;
+    position: relative;
+}
+nav{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px 0;
+}
+nav ul{
+    flex: 1;
+    text-align: right;
+    padding-right: 30px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 30px 30px;
+    font-weight: bold;
+}
+nav ul li a{
+    color: #ffffff;
+    text-decoration: none;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #000000;
+    transition: width 0.2s;
+}
+nav ul li a:hover::after{
+    width: 50%;
+}
+nav ul li a:hover{
+    color: #000000;
+    transition: 0.2s;
+}
+.intro{
+    color: #ffffff92;
+    position: absolute;
+    bottom: 8%;
+}
+.intro p{
+    margin-left: 0%;
+    font-size: 50px;
+    font-weight: 500;
+    font-family: 'Roboto Mono', monospace;
+    color: #ffffff;
+}
+.intro h1{
+    font-size: 190px;
+    line-height: 160px;
+    margin-left: 50px;
+    color: transparent;
+    -webkit-text-stroke: 0.1px #ffffff92;
+    background-image: url(Images/back.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+}
+@keyframes back{
+    100%{
+        background-position: 2000px 0;
+    }
+}
+.intro h5{
+    color: #ffffff;
+    margin-left: 50px;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Roboto Mono', monospace;
+    padding: auto;
+}
+.intro .infos{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin-left: 0%; 
+}
+.intro a{
+    color: #ffffff92;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: 2px solid #ffffff92;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+}
+.intro .infos a{
+    color: #ffffff92;
+    text-decoration: none;
+    position: relative;
+}
+.intro .infos a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffffff92;
+    transition: width 0.2s;
+}
+.intro .infos a:hover::after{
+    width: 50%;
+}
+.intro .infos a:hover{
+    color: #ffffff92;
+    transition: 0.2s;
+}
+.infos span{
+    color: #ffffff92;
+    font-size: 20px;
+    line-height: 23px;
+    margin-left: 5px;
+    font-weight:800;
+    font-style: italic;
+}
+section .Portfolio{
+    background-image: linear-gradient(rgba(0, 0, 1, 1),rgba(0, 1, 0, 0));
+}
+.Portfolio h1{
+    color: #ffffff92;
+    align-items: center;
+    text-align: center;
+    line-height: 500%;
+    font-size: 50px;
+    font-family: 'Roboto Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+}
+.pics{
+    padding: 10px;
+    max-width: 98%;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 250px;
+    grid-auto-flow: dense;
+}
+.pics div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+.big{
+    grid-column: span 2;
+    grid-row: span 2;
+}
+.h{
+    grid-row: span 2;
+}
+.hh{
+    grid-row: span 3;
+    grid-column: span 2;
+}
+.bigger{
+    grid-column: span 3;
+    grid-row: span 3;
+}
+.biggest{
+    grid-column: span 4;
+    grid-row: span 3;
+}
+.bb{
+    grid-column: span 5;
+    grid-row: span 3;
+}
+.QuotePortfolio h1{
+    text-align: left;
+    font-style: italic;
+    font-family: 'Roboto Mono', monospace;
+    font-size: medium;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 60px;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    border:2px solid #fffffffb;
+    border-radius: 15px;
+}
+.QuotePortfolio h1 span{
+    color: rgba(255, 0, 0, 0.5);
+}
+#About{
+    background-image: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 1));
+}
+#About .about{
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.about img{
+    height: auto;
+    width: 450px;
+    margin-top: 8%;
+    margin-bottom: 10%;
+}
+.about-text{
+    width: 550px;
+}
+.about-text h1{
+    color: #ffffff92;
+    font-size: 70px;
+    text-transform: capitalize;
+    font-family: 'Roboto Mono', monospace;
+    letter-spacing: 6px;
+}
+.about-text h1 span{
+    color: rgba(255, 0, 0, 0.5);
+}
+.about-text h4 span{
+    color: rgba(255, 0, 0, 0.5);
+}
+.about-text h4{
+    color: #ffffff92;
+    font-size: 20px;
+    margin-bottom: 50px;
+    text-transform: capitalize;
+    font-family: 'Roboto Mono', monospace;
+    letter-spacing: 2px; 
+}
+.about-text p{
+    color: #ffffff92;
+    letter-spacing: 1px;
+    line-height: 20px;
+    font-size: 15px;
+    margin-bottom: 40px;
+}
